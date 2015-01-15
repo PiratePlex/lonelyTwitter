@@ -5,13 +5,13 @@ import java.util.Date;
 public abstract class LonelyTweetModel {
 	private String text;
 	private Date timestamp;
-	public String getText() {
+	public String getText() {	// may throw RuntimeExcepptions, but not normal
 		return text;
 	}
 	
 	public LonelyTweetModel(String text) {
-		super();
-		this.text = text;
+		super();	//calling constructor in the class object
+		this.text = text;	//takes the text that was passed in as an argument and sets it to text
 		timestamp = new Date();
 	}
 	
