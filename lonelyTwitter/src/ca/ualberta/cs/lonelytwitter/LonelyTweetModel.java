@@ -32,6 +32,7 @@ public abstract class LonelyTweetModel {
 		this.timestamp = timestamp;
 	}
 	
+	//Used to compare if two tweets are equal or not
 	public boolean equals(Object other) {
 		if (other == null || !(other instanceof LonelyTweetModel)) {
 			return false;
