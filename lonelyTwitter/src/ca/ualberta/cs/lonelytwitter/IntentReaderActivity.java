@@ -25,6 +25,17 @@ public class IntentReaderActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_intent_reader);
+		Intent intent = getIntent();
+		text = intent.getStringExtra(TEXT_KEY);
+		mode = intent.getIntExtra(TRANSFORM_KEY, NORMAL);
+		text = transformText(text);
+		TextView view = (TextView) findViewById(R.id.intentText);
+		view.setText(text);
+		if (text == null){
+			view.setText("No text sent");
+		}
+			
+		
 	}
 	
 	public String transformText(String text) {
